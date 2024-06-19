@@ -22,6 +22,15 @@ pipeline{
                 sh 'mvn test'
             }
         }
+        stage("SONAR QUALITY CHECK") {
+            steps {
+                script {
+                  withSonarQubeEnv(installationName: 'sonarscanner', credentialsId:'kube-sonar-token'){
+                   sh 'mvn sonar:sonar'
+              }
+            }
+        }
+        }
 
 
         stage('BUILD APP IMAGE') {
