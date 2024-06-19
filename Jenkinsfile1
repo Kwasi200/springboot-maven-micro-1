@@ -5,9 +5,9 @@ pipeline{
         registryCredential = 'docker-hub-credentials-id'
     }
 
-    agent {
+    /*agent {
         label 'KOPS'
-    }
+    } */
 
     
 
