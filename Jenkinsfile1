@@ -12,16 +12,6 @@ pipeline{
     
 
     stages{
-        /*stage ('INITIALISE WORKSPACE') {
-            steps{
-                sh(script: "mkdir wowotwe", label: 'create artifact directory')
-            }
-        }
-        stage('GIT STAGE'){
-            steps{
-                git branch: 'etwe', url: 'https://github.com/cloudtechmasters/springboot-maven-course-micro-svc.git'
-            }
-        } */
         stage('BUILD') {
             steps {
                 sh 'mvn clean package'
