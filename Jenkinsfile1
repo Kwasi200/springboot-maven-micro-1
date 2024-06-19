@@ -51,7 +51,7 @@ pipeline{
             steps {
             script {
               sh '''kubectl apply -f springboot-deployment.yml  
-                  kubectl apply -f springboot-service.yml
+                  kubectl apply -f springboot-service.yaml
                   kubectl get all
                 '''
         }
