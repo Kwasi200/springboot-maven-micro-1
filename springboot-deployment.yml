@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: springboot-container
-        image: cloudtechmasters/springboot-maven-course-micro-svc:latest
+       # image: cloudtechmasters/springboot-maven-course-micro-svc:latest
+        image: ${registry}:V${BUILD_NUMBER}
         ports:
         - containerPort: 8080
