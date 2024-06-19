@@ -50,7 +50,7 @@ pipeline{
           agent {label 'KOPS'}
             steps {
             script {
-              sh '''kubectl apply -f springboot-deployment.yml 
+              sh '''kubectl apply -f springboot-deployment.yml  
                   kubectl apply -f springboot-service.yml
                   kubectl get all
                 '''
